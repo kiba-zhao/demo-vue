@@ -1,8 +1,5 @@
 import * as components from './components';
-import * as modules from './stores';
-import * as locales from './locales';
-import {installPlugin} from './helpers';
-import {paths} from './config';
-export * from './helpers';
+export { components };
+export { default as vuex } from './store';
+export { default as i18n } from './i18n';
 
-export const install = installPlugin.bind(this,{paths,modules,locales,components});

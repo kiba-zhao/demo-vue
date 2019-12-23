@@ -1,9 +1,7 @@
+import { vuex } from './index';
 import View from './demo.vue';
 import * as views from './views';
-import * as components from './components';
-import * as modules from './store';
-import * as locales from './locale';
-import { installPlugin } from './helpers';
+
 
 import Vue from 'vue';
 import Vuex from 'vuex';
@@ -11,9 +9,7 @@ import VueRouter from 'vue-router';
 
 Vue.use(Vuex);
 Vue.use(VueRouter);
-const store = new Vuex.Store({});
-const install = installPlugin.bind(this, { modules, locales, components });
-Vue.use({ install }, { store });
+const store = new Vuex.Store(vuex);
 
 const keys = Object.keys(views);
 const routes = [];
