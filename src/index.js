@@ -1,5 +1,5 @@
 import * as components from './components';
-export { components };
-export { default as vuex } from './store';
-export { default as i18n } from './i18n';
+import * as vuex from './store';
+import * as i18n from './i18n';
+export { components, vuex, i18n };
 

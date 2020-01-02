@@ -1,0 +1,1695 @@
+{
+  "id": "LUNG_Resection.0",
+  "title": "LUNG_Resection",
+  "version": "",
+  "children": [
+    {
+      "id": "#content",
+      "title": "Content",
+      "children": [
+        {
+          "id": "1",
+          "title": "Specimen",
+          "children": [
+            {
+              "id": "2",
+              "title": "Procedure (select all that apply)",
+              "type": "option",
+              "multiple": {
+                "max": 0
+              },
+              "children": [
+                {
+                  "item": true,
+                  "id": "7",
+                  "title": "Wedge resection"
+                },
+                {
+                  "item": true,
+                  "id": "8",
+                  "title": "Segmentectomy"
+                },
+                {
+                  "item": true,
+                  "id": "9",
+                  "title": "Lobectomy"
+                },
+                {
+                  "item": true,
+                  "id": "10",
+                  "title": "Completion lobectomy"
+                },
+                {
+                  "item": true,
+                  "id": "11",
+                  "title": "Sleeve lobectomy"
+                },
+                {
+                  "item": true,
+                  "id": "12",
+                  "title": "Bilobectomy"
+                },
+                {
+                  "item": true,
+                  "id": "13",
+                  "title": "Pneumonectomy"
+                },
+                {
+                  "item": true,
+                  "id": "14",
+                  "title": "Major airway resection (specify)",
+                  "type": "string"
+                },
+                {
+                  "item": true,
+                  "id": "15",
+                  "title": "Other (specify)",
+                  "type": "string"
+                },
+                {
+                  "item": true,
+                  "id": "16",
+                  "title": "Not specified"
+                }
+              ]
+            },
+            {
+              "id": "3",
+              "title": "Specimen Laterality",
+              "type": "option",
+              "children": [
+                {
+                  "item": true,
+                  "id": "4",
+                  "title": "Right"
+                },
+                {
+                  "item": true,
+                  "id": "5",
+                  "title": "Left"
+                },
+                {
+                  "item": true,
+                  "id": "6",
+                  "title": "Not specified"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "17",
+          "title": "Tumour",
+          "children": [
+            {
+              "id": "18",
+              "title": "Synchronous Tumors (required if morphologically distinct unrelated multiple primary tumors are present)",
+              "type": "option",
+              "children": [
+                {
+                  "item": true,
+                  "id": "150",
+                  "title": "Present#",
+                  "children": [
+                    {
+                      "id": "153",
+                      "title": "Specify total number of primary tumors identified",
+                      "type": "string"
+                    },
+                    {
+                      "id": "154",
+                      "title": "Specimen ID(s)",
+                      "type": "string"
+                    }
+                  ]
+                },
+                {
+                  "item": true,
+                  "id": "151",
+                  "title": "Cannot be determined"
+                },
+                {
+                  "type": "text",
+                  "id": "152",
+                  "title": "#  Morphologically distinct tumors that are considered to represent separate primary lung cancers should have separate synoptic reports",
+                  "description": "",
+                  "value": "#  Morphologically distinct tumors that are considered to represent separate primary lung cancers should have separate synoptic reports"
+                }
+              ]
+            },
+            {
+              "id": "19",
+              "title": "Tumor Site (select all that apply)",
+              "type": "option",
+              "multiple": {
+                "max": 0
+              },
+              "children": [
+                {
+                  "item": true,
+                  "id": "142",
+                  "title": "Upper lobe of lung"
+                },
+                {
+                  "item": true,
+                  "id": "143",
+                  "title": "Middle lobe of lung"
+                },
+                {
+                  "item": true,
+                  "id": "144",
+                  "title": "Lower lobe of lung"
+                },
+                {
+                  "item": true,
+                  "id": "145",
+                  "title": "Bronchus, main"
+                },
+                {
+                  "item": true,
+                  "id": "146",
+                  "title": "Bronchus intermedius"
+                },
+                {
+                  "item": true,
+                  "id": "147",
+                  "title": "Bronchus, lobar (specify)",
+                  "type": "string"
+                },
+                {
+                  "item": true,
+                  "id": "148",
+                  "title": "Other (specify)",
+                  "type": "string"
+                },
+                {
+                  "item": true,
+                  "id": "149",
+                  "title": "Not specified"
+                }
+              ]
+            },
+            {
+              "id": "20",
+              "title": "Tumor Size",
+              "children": [
+                {
+                  "id": "129",
+                  "title": "Total tumor size (size of entire tumor)#",
+                  "type": "option",
+                  "multiple": {
+                    "max": 0
+                  },
+                  "children": [
+                    {
+                      "item": true,
+                      "id": "137",
+                      "title": "Cannot be determined",
+                      "children": [
+                        {
+                          "id": "138",
+                          "title": "Greatest dimension (centimeters)",
+                          "type": "string"
+                        },
+                        {
+                          "id": "139",
+                          "title": "Additional dimensions (centimeters)",
+                          "children": [
+                            {
+                              "id": "140",
+                              "title": "",
+                              "type": "string"
+                            },
+                            {
+                              "id": "141",
+                              "title": "",
+                              "type": "string"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "130",
+                  "title": "Size of invasive component## (required only if invasive nonmucinous adenocarcinomas with lepidic component is present)",
+                  "type": "option",
+                  "multiple": {
+                    "max": 0
+                  },
+                  "children": [
+                    {
+                      "item": true,
+                      "id": "131",
+                      "title": "Cannot be determined",
+                      "children": [
+                        {
+                          "id": "134",
+                          "title": "Greatest dimension (centimeters)",
+                          "type": "string"
+                        },
+                        {
+                          "id": "135",
+                          "title": "Additional dimensions (centimeters)",
+                          "type": "string"
+                        },
+                        {
+                          "id": "136",
+                          "title": "Percent of total tumor size (above)",
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "132",
+                      "title": "# Note: The size of the entire tumor (total tumor size) applies to all tumors and includes the invasive component and the nonmucinous lepidic component of adenocarcinomas.",
+                      "description": "",
+                      "value": "# Note: The size of the entire tumor (total tumor size) applies to all tumors and includes the invasive component and the nonmucinous lepidic component of adenocarcinomas."
+                    },
+                    {
+                      "type": "text",
+                      "id": "133",
+                      "title": "## Note: The size of the invasive component applies only to invasive nonmucinous adenocarcinomas with lepidic component. For all tumor types other than invasive nonmucinous adenocarcinoma with lepidic component, invasive tumor size equals total tumor size.",
+                      "description": "",
+                      "value": "## Note: The size of the invasive component applies only to invasive nonmucinous adenocarcinomas with lepidic component. For all tumor types other than invasive nonmucinous adenocarcinoma with lepidic component, invasive tumor size equals total tumor size."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "21",
+              "title": "Tumor Focality",
+              "type": "option",
+              "children": [
+                {
+                  "item": true,
+                  "id": "118",
+                  "title": "Single focus"
+                },
+                {
+                  "item": true,
+                  "id": "119",
+                  "title": "Separate tumor nodules (metastases) in same lobe (pT3)",
+                  "children": [
+                    {
+                      "id": "128",
+                      "title": "Specify number of intrapulmonary metastases identified",
+                      "type": "string"
+                    }
+                  ]
+                },
+                {
+                  "item": true,
+                  "id": "120",
+                  "title": "Separate tumor nodules (metastases) in different ipsilateral lobe (pT4)",
+                  "children": [
+                    {
+                      "id": "127",
+                      "title": "Specify number of intrapulmonary metastases identified",
+                      "type": "string"
+                    }
+                  ]
+                },
+                {
+                  "item": true,
+                  "id": "121",
+                  "title": "Separate tumor nodules (metastases) in a contralateral lobe (pM1a)",
+                  "children": [
+                    {
+                      "id": "126",
+                      "title": "Specify number of distant metastases identified",
+                      "type": "string"
+                    }
+                  ]
+                },
+                {
+                  "item": true,
+                  "id": "122",
+                  "title": "Multifocal ground-glass / lepidic nodules",
+                  "children": [
+                    {
+                      "id": "125",
+                      "title": "Specify number of tumor nodules identified",
+                      "type": "string"
+                    }
+                  ]
+                },
+                {
+                  "item": true,
+                  "id": "123",
+                  "title": "Pneumonic-type adenocarcinoma"
+                },
+                {
+                  "item": true,
+                  "id": "124",
+                  "title": "Cannot be determined"
+                }
+              ]
+            },
+            {
+              "id": "22",
+              "title": "Histologic Type",
+              "type": "option",
+              "children": [
+                {
+                  "item": true,
+                  "id": "70",
+                  "title": "Adenocarcinoma in situ (AIS), nonmucinous"
+                },
+                {
+                  "item": true,
+                  "id": "71",
+                  "title": "Adenocarcinoma in situ (AIS), mucinous"
+                },
+                {
+                  "item": true,
+                  "id": "72",
+                  "title": "Minimally invasive adenocarcinoma, nonmucinous"
+                },
+                {
+                  "item": true,
+                  "id": "73",
+                  "title": "Minimally invasive adenocarcinoma, mucinous"
+                },
+                {
+                  "item": true,
+                  "id": "74",
+                  "title": "Invasive adenocarcinoma, lepidic predominant",
+                  "children": [
+                    {
+                      "id": "117",
+                      "title": "Other subtypes present (specify subtype(s), may also include percentages)",
+                      "type": "string"
+                    }
+                  ]
+                },
+                {
+                  "item": true,
+                  "id": "75",
+                  "title": "Invasive adenocarcinoma, acinar predominant",
+                  "children": [
+                    {
+                      "id": "116",
+                      "title": "Other subtypes present (specify subtype(s), may also include percentages)",
+                      "type": "string"
+                    }
+                  ]
+                },
+                {
+                  "item": true,
+                  "id": "76",
+                  "title": "Invasive adenocarcinoma, papillary predominant",
+                  "children": [
+                    {
+                      "id": "115",
+                      "title": "Other subtypes present (specify subtype(s), may also include percentages)",
+                      "type": "string"
+                    }
+                  ]
+                },
+                {
+                  "item": true,
+                  "id": "77",
+                  "title": "Invasive adenocarcinoma, micropapillary predominant",
+                  "children": [
+                    {
+                      "id": "114",
+                      "title": "Other subtypes present (specify subtype(s), may also include percentages)",
+                      "type": "string"
+                    }
+                  ]
+                },
+                {
+                  "item": true,
+                  "id": "78",
+                  "title": "Invasive adenocarcinoma, solid predominant",
+                  "children": [
+                    {
+                      "id": "113",
+                      "title": "Other subtypes present (specify subtype(s), may also include percentages)",
+                      "type": "string"
+                    }
+                  ]
+                },
+                {
+                  "item": true,
+                  "id": "79",
+                  "title": "Invasive adenocarcinoma, predominant subtype cannot be determined (explain)",
+                  "type": "string",
+                  "children": [
+                    {
+                      "id": "112",
+                      "title": "Subtypes present (specify subtype(s), may also include percentages)",
+                      "type": "string"
+                    }
+                  ]
+                },
+                {
+                  "item": true,
+                  "id": "80",
+                  "title": "Invasive mucinous adenocarcinoma"
+                },
+                {
+                  "item": true,
+                  "id": "81",
+                  "title": "Mixed invasive mucinous and nonmucinous adenocarcinoma"
+                },
+                {
+                  "item": true,
+                  "id": "82",
+                  "title": "Colloid adenocarcinoma"
+                },
+                {
+                  "item": true,
+                  "id": "83",
+                  "title": "Fetal adenocarcinoma"
+                },
+                {
+                  "item": true,
+                  "id": "84",
+                  "title": "Enteric adenocarcinoma"
+                },
+                {
+                  "item": true,
+                  "id": "85",
+                  "title": "Squamous cell carcinoma in situ (SCIS)"
+                },
+                {
+                  "item": true,
+                  "id": "86",
+                  "title": "Invasive squamous cell carcinoma, keratinizing"
+                },
+                {
+                  "item": true,
+                  "id": "87",
+                  "title": "Invasive squamous cell carcinoma, non-keratinizing"
+                },
+                {
+                  "item": true,
+                  "id": "88",
+                  "title": "Invasive squamous cell carcinoma, basaloid"
+                },
+                {
+                  "item": true,
+                  "id": "89",
+                  "title": "Small cell carcinoma"
+                },
+                {
+                  "item": true,
+                  "id": "90",
+                  "title": "Combined small cell carcinoma (small cell carcinoma and non-small cell component)",
+                  "children": [
+                    {
+                      "id": "111",
+                      "title": "(specify type of non-small cell carcinoma component)",
+                      "type": "string"
+                    }
+                  ]
+                },
+                {
+                  "item": true,
+                  "id": "91",
+                  "title": "Large cell neuroendocrine carcinoma"
+                },
+                {
+                  "item": true,
+                  "id": "92",
+                  "title": "Combined large cell neuroendocrine carcinoma (LCNEC and other non-small cell component)",
+                  "children": [
+                    {
+                      "id": "110",
+                      "title": "(specify type of other non-small cell carcinoma component)",
+                      "type": "string"
+                    }
+                  ]
+                },
+                {
+                  "item": true,
+                  "id": "93",
+                  "title": "Typical carcinoid tumor"
+                },
+                {
+                  "item": true,
+                  "id": "94",
+                  "title": "Atypical carcinoid tumor"
+                },
+                {
+                  "item": true,
+                  "id": "95",
+                  "title": "Large cell carcinoma"
+                },
+                {
+                  "item": true,
+                  "id": "96",
+                  "title": "Adenosquamous carcinoma"
+                },
+                {
+                  "item": true,
+                  "id": "97",
+                  "title": "Pleomorphic carcinoma"
+                },
+                {
+                  "item": true,
+                  "id": "98",
+                  "title": "Spindle cell carcinoma"
+                },
+                {
+                  "item": true,
+                  "id": "99",
+                  "title": "Giant cell carcinoma"
+                },
+                {
+                  "item": true,
+                  "id": "100",
+                  "title": "Carcinosarcoma"
+                },
+                {
+                  "item": true,
+                  "id": "101",
+                  "title": "Pulmonary blastoma"
+                },
+                {
+                  "item": true,
+                  "id": "102",
+                  "title": "Lymphoepithelioma-like carcinoma"
+                },
+                {
+                  "item": true,
+                  "id": "103",
+                  "title": "NUT carcinoma"
+                },
+                {
+                  "item": true,
+                  "id": "104",
+                  "title": "Mucoepidermoid carcinoma"
+                },
+                {
+                  "item": true,
+                  "id": "105",
+                  "title": "Adenoid cystic carcinoma"
+                },
+                {
+                  "item": true,
+                  "id": "106",
+                  "title": "Epithelial-myoepithelial carcinoma"
+                },
+                {
+                  "item": true,
+                  "id": "107",
+                  "title": "Carcinoma, type cannot be determined"
+                },
+                {
+                  "item": true,
+                  "id": "108",
+                  "title": "Non-small cell carcinoma, subtype cannot be determined"
+                },
+                {
+                  "item": true,
+                  "id": "109",
+                  "title": "Other histologic type not listed (specify)",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "id": "23",
+              "title": "Histologic Grade",
+              "type": "option",
+              "children": [
+                {
+                  "item": true,
+                  "id": "63",
+                  "title": "G1: Well differentiated"
+                },
+                {
+                  "item": true,
+                  "id": "64",
+                  "title": "G2: Moderately differentiated"
+                },
+                {
+                  "item": true,
+                  "id": "65",
+                  "title": "G3: Poorly differentiated"
+                },
+                {
+                  "item": true,
+                  "id": "66",
+                  "title": "G4: Undifferentiated"
+                },
+                {
+                  "item": true,
+                  "id": "67",
+                  "title": "Other (specify)",
+                  "type": "string"
+                },
+                {
+                  "item": true,
+                  "id": "68",
+                  "title": "GX: Cannot be assessed"
+                },
+                {
+                  "item": true,
+                  "id": "69",
+                  "title": "Not applicable"
+                }
+              ]
+            },
+            {
+              "id": "24",
+              "title": "Spread Through Air Spaces (STAS)",
+              "type": "option",
+              "children": [
+                {
+                  "item": true,
+                  "id": "61",
+                  "title": "Not identified"
+                },
+                {
+                  "item": true,
+                  "id": "62",
+                  "title": "Present"
+                }
+              ]
+            },
+            {
+              "id": "25",
+              "title": "Visceral Pleura Invasion",
+              "type": "option",
+              "children": [
+                {
+                  "item": true,
+                  "id": "58",
+                  "title": "Not identified"
+                },
+                {
+                  "item": true,
+                  "id": "59",
+                  "title": "Present"
+                },
+                {
+                  "item": true,
+                  "id": "60",
+                  "title": "Cannot be determined"
+                }
+              ]
+            },
+            {
+              "id": "26",
+              "title": "Lymphovascular Invasion",
+              "type": "option",
+              "children": [
+                {
+                  "item": true,
+                  "id": "51",
+                  "title": "Not identified"
+                },
+                {
+                  "item": true,
+                  "id": "52",
+                  "title": "Present(select all that apply)",
+                  "children": [
+                    {
+                      "id": "54",
+                      "title": "Present(select all that apply)",
+                      "type": "option",
+                      "multiple": {
+                        "max": 1
+                      },
+                      "children": [
+                        {
+                          "item": true,
+                          "id": "55",
+                          "title": "Lymphatic"
+                        },
+                        {
+                          "item": true,
+                          "id": "56",
+                          "title": "Arterial"
+                        },
+                        {
+                          "item": true,
+                          "id": "57",
+                          "title": "Venous"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "item": true,
+                  "id": "53",
+                  "title": "Cannot be determined"
+                }
+              ]
+            },
+            {
+              "id": "27",
+              "title": "Direct Invasion of Adjacent Structures",
+              "type": "option",
+              "children": [
+                {
+                  "item": true,
+                  "id": "28",
+                  "title": "No adjacent structures present"
+                },
+                {
+                  "item": true,
+                  "id": "29",
+                  "title": "Adjacent structures present but not involved"
+                },
+                {
+                  "item": true,
+                  "id": "30",
+                  "title": "Adjacent structures present and involved (select all that apply)",
+                  "children": [
+                    {
+                      "id": "32",
+                      "title": "Adjacent structures present and involved (select all that apply)",
+                      "type": "option",
+                      "multiple": {
+                        "max": 1
+                      },
+                      "children": [
+                        {
+                          "item": true,
+                          "id": "33",
+                          "title": "Main bronchus"
+                        },
+                        {
+                          "item": true,
+                          "id": "34",
+                          "title": "Hilar soft tissues"
+                        },
+                        {
+                          "item": true,
+                          "id": "35",
+                          "title": "Carina"
+                        },
+                        {
+                          "item": true,
+                          "id": "36",
+                          "title": "Parietal pleura"
+                        },
+                        {
+                          "item": true,
+                          "id": "37",
+                          "title": "Chest wall",
+                          "children": [
+                            {
+                              "id": "50",
+                              "title": "Specify involved structure(s)",
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        {
+                          "item": true,
+                          "id": "38",
+                          "title": "Phrenic nerve"
+                        },
+                        {
+                          "item": true,
+                          "id": "39",
+                          "title": "Parietal pericardium"
+                        },
+                        {
+                          "item": true,
+                          "id": "40",
+                          "title": "Diaphragm"
+                        },
+                        {
+                          "item": true,
+                          "id": "41",
+                          "title": "Mediastinum",
+                          "children": [
+                            {
+                              "id": "49",
+                              "title": "Specify involved structure(s)",
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        {
+                          "item": true,
+                          "id": "42",
+                          "title": "Heart"
+                        },
+                        {
+                          "item": true,
+                          "id": "43",
+                          "title": "Great vessels"
+                        },
+                        {
+                          "item": true,
+                          "id": "44",
+                          "title": "Trachea"
+                        },
+                        {
+                          "item": true,
+                          "id": "45",
+                          "title": "Recurrent laryngeal nerve"
+                        },
+                        {
+                          "item": true,
+                          "id": "46",
+                          "title": "Esophagus"
+                        },
+                        {
+                          "item": true,
+                          "id": "47",
+                          "title": "Vertebral body"
+                        },
+                        {
+                          "item": true,
+                          "id": "48",
+                          "title": "Other (specify)",
+                          "type": "string"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "item": true,
+                  "id": "31",
+                  "title": "Cannot be assessed (explain)",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "155",
+          "title": "Margins",
+          "children": [
+            {
+              "id": "156",
+              "title": "Margins",
+              "type": "option",
+              "children": [
+                {
+                  "item": true,
+                  "id": "162",
+                  "title": "All margins are uninvolved by tumor",
+                  "children": [
+                    {
+                      "id": "185",
+                      "title": "Margins examined (specify)",
+                      "type": "string",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "190",
+                          "title": "Note: Margins may include bronchial, vascular, parenchymal, and others.",
+                          "description": "",
+                          "value": "Note: Margins may include bronchial, vascular, parenchymal, and others."
+                        }
+                      ]
+                    },
+                    {
+                      "id": "186",
+                      "title": "Distance of invasive carcinoma from closest margin (centimeters)",
+                      "type": "string",
+                      "children": [
+                        {
+                          "id": "189",
+                          "title": "Specify closest margin",
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "187",
+                      "title": "Distance of carcinoma in situ from closest margin (if applicable) (centimeters)",
+                      "type": "string",
+                      "children": [
+                        {
+                          "id": "188",
+                          "title": "Specify closest margin (if applicable)",
+                          "type": "string"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "item": true,
+                  "id": "163",
+                  "title": "Any margins are involved or margin involvement cannot be assessed",
+                  "children": [
+                    {
+                      "id": "164",
+                      "title": "Bronchial Margin (select all that apply)",
+                      "type": "option",
+                      "multiple": {
+                        "max": 0
+                      },
+                      "children": [
+                        {
+                          "item": true,
+                          "id": "179",
+                          "title": "Not applicable"
+                        },
+                        {
+                          "item": true,
+                          "id": "180",
+                          "title": "Cannot be assessed"
+                        },
+                        {
+                          "item": true,
+                          "id": "181",
+                          "title": "Uninvolved by invasive carcinoma"
+                        },
+                        {
+                          "item": true,
+                          "id": "182",
+                          "title": "Uninvolved by carcinoma in situ"
+                        },
+                        {
+                          "item": true,
+                          "id": "183",
+                          "title": "Positive for invasive carcinoma"
+                        },
+                        {
+                          "item": true,
+                          "id": "184",
+                          "title": "Positive for carcinoma in situ"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "165",
+                      "title": "Vascular Margin",
+                      "type": "option",
+                      "children": [
+                        {
+                          "item": true,
+                          "id": "175",
+                          "title": "Not applicable"
+                        },
+                        {
+                          "item": true,
+                          "id": "176",
+                          "title": "Cannot be assessed"
+                        },
+                        {
+                          "item": true,
+                          "id": "177",
+                          "title": "Uninvolved by carcinoma"
+                        },
+                        {
+                          "item": true,
+                          "id": "178",
+                          "title": "Positive for carcinoma"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "166",
+                      "title": "Parenchymal Margin (select all that apply)",
+                      "type": "option",
+                      "multiple": {
+                        "max": 0
+                      },
+                      "children": [
+                        {
+                          "item": true,
+                          "id": "167",
+                          "title": "Not applicable"
+                        },
+                        {
+                          "item": true,
+                          "id": "168",
+                          "title": "Cannot be assessed"
+                        },
+                        {
+                          "item": true,
+                          "id": "169",
+                          "title": "Uninvolved by invasive carcinoma"
+                        },
+                        {
+                          "item": true,
+                          "id": "170",
+                          "title": "Uninvolved by lepidic component of invasive adenocarcinoma"
+                        },
+                        {
+                          "item": true,
+                          "id": "171",
+                          "title": "Uninvolved by adenocarcinoma in situ"
+                        },
+                        {
+                          "item": true,
+                          "id": "172",
+                          "title": "Positive for invasive carcinoma"
+                        },
+                        {
+                          "item": true,
+                          "id": "173",
+                          "title": "Positive for lepidic component of invasive adenocarcinoma"
+                        },
+                        {
+                          "item": true,
+                          "id": "174",
+                          "title": "Positive for adenocarcinoma in situ"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "157",
+              "title": "Other Attached Tissue Margin",
+              "type": "option",
+              "children": [
+                {
+                  "item": true,
+                  "id": "159",
+                  "title": "Cannot be assessed"
+                },
+                {
+                  "item": true,
+                  "id": "160",
+                  "title": "Uninvolved by invasive carcinoma"
+                },
+                {
+                  "item": true,
+                  "id": "161",
+                  "title": "Positive for invasive carcinoma"
+                },
+                {
+                  "id": "158",
+                  "title": "Specify margin",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "191",
+          "title": "Regional Lymph Nodes",
+          "children": [
+            {
+              "id": "192",
+              "title": "Regional Lymph Nodes",
+              "type": "option",
+              "multiple": {
+                "max": 0
+              },
+              "children": [
+                {
+                  "item": true,
+                  "id": "197",
+                  "title": "No lymph nodes submitted or found",
+                  "children": [
+                    {
+                      "id": "",
+                      "title": "",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "198",
+                          "title": "Lymph Node Examination (required only if lymph nodes present in the specimen)",
+                          "description": "",
+                          "value": "Lymph Node Examination (required only if lymph nodes present in the specimen)"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "199",
+                      "title": "Lymph Nodes involvement",
+                      "type": "option",
+                      "children": [
+                        {
+                          "item": true,
+                          "id": "204",
+                          "title": "Number of Lymph Nodes Involved",
+                          "type": "string"
+                        },
+                        {
+                          "item": true,
+                          "id": "205",
+                          "title": "Number cannot be determined (explain)",
+                          "type": "string",
+                          "children": [
+                            {
+                              "id": "206",
+                              "title": "Specify nodal station(s) involved (applicable only if node(s) involved)",
+                              "type": "string"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "200",
+                      "title": "Lymph Nodes examination",
+                      "type": "option",
+                      "children": [
+                        {
+                          "item": true,
+                          "id": "201",
+                          "title": "Number of Lymph Nodes Examined",
+                          "type": "string"
+                        },
+                        {
+                          "item": true,
+                          "id": "202",
+                          "title": "Number cannot be determined (explain)",
+                          "type": "string",
+                          "children": [
+                            {
+                              "id": "203",
+                              "title": "Specify nodal station(s) examined",
+                              "type": "string"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "193",
+              "title": "Extranodal Extension",
+              "type": "option",
+              "children": [
+                {
+                  "item": true,
+                  "id": "194",
+                  "title": "Not identified"
+                },
+                {
+                  "item": true,
+                  "id": "195",
+                  "title": "Present"
+                },
+                {
+                  "item": true,
+                  "id": "196",
+                  "title": "Cannot be determined"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "207",
+          "title": "Treatment Effect",
+          "children": [
+            {
+              "id": "208",
+              "title": "Treatment Effect",
+              "type": "option",
+              "children": [
+                {
+                  "item": true,
+                  "id": "209",
+                  "title": "No known presurgical therapy"
+                },
+                {
+                  "item": true,
+                  "id": "210",
+                  "title": "Greater than 10% residual viable tumor"
+                },
+                {
+                  "item": true,
+                  "id": "211",
+                  "title": "Less than or equal to 10% residual viable tumor"
+                },
+                {
+                  "item": true,
+                  "id": "212",
+                  "title": "Cannot be determined"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "213",
+          "title": "Stage",
+          "children": [
+            {
+              "id": "214",
+              "title": "Pathologic Stage Classification (pTNM) (AJCC 8th Edition)",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "247",
+                  "title": "Note: Reporting of pT, pN, and (when applicable) pM categories is based on information available to the pathologist at the time the report is issued. Only the applicable T, N, or M category is required for reporting; their definitions need not be included in the report. The categories (with modifiers when applicable) can be listed on 1 line or more than 1 line. As per the AJCC (Chapter 1, 8th Ed.) it is the managing physician’s responsibility to establish the final pathologic stage based upon all pertinent information, including but potentially not limited to this pathology report.",
+                  "description": "",
+                  "value": "Note: Reporting of pT, pN, and (when applicable) pM categories is based on information available to the pathologist at the time the report is issued. Only the applicable T, N, or M category is required for reporting; their definitions need not be included in the report. The categories (with modifiers when applicable) can be listed on 1 line or more than 1 line. As per the AJCC (Chapter 1, 8th Ed.) it is the managing physician’s responsibility to establish the final pathologic stage based upon all pertinent information, including but potentially not limited to this pathology report."
+                },
+                {
+                  "id": "248",
+                  "title": "TNM Descriptors  (select all that apply)",
+                  "type": "option",
+                  "multiple": {
+                    "max": 0
+                  },
+                  "children": [
+                    {
+                      "item": true,
+                      "id": "249",
+                      "title": "m (multiple primary tumors)#"
+                    },
+                    {
+                      "item": true,
+                      "id": "250",
+                      "title": "r (recurrent)"
+                    },
+                    {
+                      "item": true,
+                      "id": "251",
+                      "title": "y (posttreatment)"
+                    },
+                    {
+                      "type": "text",
+                      "id": "252",
+                      "title": "#Note: The suffix m (or a specific number) should only be used in the setting of multifocal ground-glass / lepidic nodules that histologically present as adenocarcinomas with prominent lepidic component. Multiple primary lung cancers showing different histologic type or different morphology based on comprehensive histologic subtyping are staged as independent tumors without m suffix.",
+                      "description": "",
+                      "value": "#Note: The suffix m (or a specific number) should only be used in the setting of multifocal ground-glass / lepidic nodules that histologically present as adenocarcinomas with prominent lepidic component. Multiple primary lung cancers showing different histologic type or different morphology based on comprehensive histologic subtyping are staged as independent tumors without m suffix."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "215",
+              "title": "Primary Tumor (pT)",
+              "type": "option",
+              "children": [
+                {
+                  "item": true,
+                  "id": "229",
+                  "title": "pTX:\tPrimary tumor cannot be assessed, or tumor proven by presence of malignant cells in sputum or bronchial washings but not visualized by imaging or bronchoscopy"
+                },
+                {
+                  "item": true,
+                  "id": "230",
+                  "title": "pT0:\tNo evidence of primary tumor"
+                },
+                {
+                  "item": true,
+                  "id": "231",
+                  "title": "pTis (SCIS):\tSquamous cell carcinoma in situ (SCIS)"
+                },
+                {
+                  "item": true,
+                  "id": "232",
+                  "title": "pTis (AIS):\tAdenocarcinoma in situ (AIS): adenocarcinoma with pure lepidic pattern, ≤3 cm in greatest dimension"
+                },
+                {
+                  "item": true,
+                  "id": "233",
+                  "title": "pT1: \tTumor ≤3 cm in greatest dimension, surrounded by lung or visceral pleura, without bronchoscopic evidence of invasion more proximal than the lobar bronchus (ie, not in the main bronchus)"
+                },
+                {
+                  "item": true,
+                  "id": "234",
+                  "title": "pT1mi:\tMinimally invasive adenocarcinoma: adenocarcinoma (≤3 cm in greatest dimension) with a predominantly lepidic pattern and ≤5 mm invasion in greatest dimension (See note C)"
+                },
+                {
+                  "item": true,
+                  "id": "235",
+                  "title": "pT1a:\tTumor ≤1 cm or less in greatest dimension; A superficial spreading tumor of any size whose invasive component limited to the bronchial wall and may extend proximal to the main bronchus also is classified as T1a, but these tumors are uncommon"
+                },
+                {
+                  "item": true,
+                  "id": "236",
+                  "title": "pT1b: \tTumor >1 cm, but ≤2 cm in greatest dimension"
+                },
+                {
+                  "item": true,
+                  "id": "237",
+                  "title": "pT1c:\tTumor >2 cm but ≤3 cm in greatest dimension"
+                },
+                {
+                  "item": true,
+                  "id": "238",
+                  "title": "pT2: \tTumor >3 cm but ≤5 cm or having any of the following features:#"
+                },
+                {
+                  "item": true,
+                  "id": "242",
+                  "title": "pT2a:\tTumor >3 cm, but ≤4 cm in greatest dimension"
+                },
+                {
+                  "item": true,
+                  "id": "243",
+                  "title": "pT2b:\tTumor >4 cm, but ≤5 cm in greatest dimension"
+                },
+                {
+                  "item": true,
+                  "id": "244",
+                  "title": "pT3:\tTumor >5 cm but ≤7 cm in greatest dimension; or directly invading any of the following: parietal pleura (PL3), chest wall (including superior sulcus tumors), phrenic nerve, parietal pericardium; or separate tumor nodule(s) in the same lobe as the primary"
+                },
+                {
+                  "item": true,
+                  "id": "245",
+                  "title": "pT4:\tTumor >7 cm in greatest dimension; or tumor of any size invading one or more of the following: diaphragm, mediastinum, heart, great vessels, trachea, recurrent laryngeal nerve, esophagus, vertebral body or carina; or separate tumor nodule(s) in an ipsilateral lobe different from that of the primary"
+                },
+                {
+                  "id": "239",
+                  "title": "Involves the main bronchus regardless of distance to the carina, but without involvement of the carina; "
+                },
+                {
+                  "id": "240",
+                  "title": "Invades visceral pleura (PL1 or PL2);"
+                },
+                {
+                  "id": "241",
+                  "title": "Associated with atelectasis or obstructive pneumonitis that extends to the hilar region, involving part or all of the lung."
+                },
+                {
+                  "type": "text",
+                  "id": "246",
+                  "title": "#Note: Tumors with these features are classified as T2a if ≤4 cm or if the size cannot be determined and T2b if >4 cm but ≤5 cm.",
+                  "description": "",
+                  "value": "#Note: Tumors with these features are classified as T2a if ≤4 cm or if the size cannot be determined and T2b if >4 cm but ≤5 cm."
+                }
+              ]
+            },
+            {
+              "id": "216",
+              "title": "Regional Lymph Nodes (pN)",
+              "type": "option",
+              "children": [
+                {
+                  "item": true,
+                  "id": "224",
+                  "title": "pNX:\tRegional lymph nodes cannot be assessed"
+                },
+                {
+                  "item": true,
+                  "id": "225",
+                  "title": "pN0:\tNo regional lymph node metastasis"
+                },
+                {
+                  "item": true,
+                  "id": "226",
+                  "title": "pN1:\tMetastasis in ipsilateral peribronchial and/or ipsilateral hilar lymph nodes, and intrapulmonary nodes, including involvement by direct extension"
+                },
+                {
+                  "item": true,
+                  "id": "227",
+                  "title": "pN2:\tMetastasis in ipsilateral mediastinal and/or subcarinal lymph node(s)"
+                },
+                {
+                  "item": true,
+                  "id": "228",
+                  "title": "pN3:\tMetastasis in contralateral mediastinal, contralateral hilar, ipsilateral or contralateral scalene, or supraclavicular lymph node(s)"
+                }
+              ]
+            },
+            {
+              "id": "217",
+              "title": "Distant Metastasis (pM) (required only if confirmed pathologically in this case)",
+              "type": "option",
+              "children": [
+                {
+                  "item": true,
+                  "id": "218",
+                  "title": "pM1a:\tSeparate tumor nodule(s) in contralateral lobe; tumor with pleural or pericardial nodules or malignant pleural (or pericardial) effusion#"
+                },
+                {
+                  "item": true,
+                  "id": "219",
+                  "title": "pM1b: \tSingle extrathoracic metastasis in a single organ (including involvement of a single nonregional lymph node)"
+                },
+                {
+                  "item": true,
+                  "id": "220",
+                  "title": "pM1c:\tMultiple extrathoracic metastases in single organ or in multiple organs"
+                },
+                {
+                  "id": "221",
+                  "title": ""
+                },
+                {
+                  "id": "222",
+                  "title": "Specify site(s) (if applicable)",
+                  "type": "string"
+                },
+                {
+                  "type": "text",
+                  "id": "223",
+                  "title": "#Note: Most pleural (pericardial) effusions with lung cancer are a result of the tumor. In a few patients, however, multiple microscopic examinations of pleural (pericardial) fluid are negative for tumor, and the fluid is nonbloody and not an exudate. If these elements and clinical judgment dictate that the effusion is not related to the tumor, the effusion should be excluded as a staging descriptor.",
+                  "description": "",
+                  "value": "#Note: Most pleural (pericardial) effusions with lung cancer are a result of the tumor. In a few patients, however, multiple microscopic examinations of pleural (pericardial) fluid are negative for tumor, and the fluid is nonbloody and not an exudate. If these elements and clinical judgment dictate that the effusion is not related to the tumor, the effusion should be excluded as a staging descriptor."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "253",
+          "title": "ADDITIONAL Pathologic Findings",
+          "children": [
+            {
+              "id": "254",
+              "title": "Additional Pathologic Findings (select all that apply)",
+              "type": "option",
+              "multiple": {
+                "max": 0
+              },
+              "children": [
+                {
+                  "item": true,
+                  "id": "255",
+                  "title": "None identified"
+                },
+                {
+                  "item": true,
+                  "id": "256",
+                  "title": "Atypical adenomatous hyperplasia"
+                },
+                {
+                  "item": true,
+                  "id": "257",
+                  "title": "Squamous dysplasia"
+                },
+                {
+                  "item": true,
+                  "id": "258",
+                  "title": "Metaplasia (specify type)",
+                  "type": "string"
+                },
+                {
+                  "item": true,
+                  "id": "259",
+                  "title": "Diffuse neuroendocrine hyperplasia"
+                },
+                {
+                  "item": true,
+                  "id": "260",
+                  "title": "Inflammation (specify type)",
+                  "type": "string"
+                },
+                {
+                  "item": true,
+                  "id": "261",
+                  "title": "Fibrosis (identify if discernable pattern)",
+                  "type": "string"
+                },
+                {
+                  "item": true,
+                  "id": "262",
+                  "title": "Emphysema"
+                },
+                {
+                  "item": true,
+                  "id": "263",
+                  "title": "Other (specify)",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "264",
+          "title": "Ancillary Studies",
+          "children": [
+            {
+              "id": "265",
+              "title": "Ancillary Studies",
+              "type": "option",
+              "children": [
+                {
+                  "item": true,
+                  "id": "267",
+                  "title": "Yes, please specify",
+                  "type": "string"
+                },
+                {
+                  "item": true,
+                  "id": "268",
+                  "title": "No"
+                },
+                {
+                  "type": "text",
+                  "id": "266",
+                  "title": "Note: For reporting cancer biomarker testing results, the CAP Lung Biomarker Template should be used. Pending biomarker studies should be listed in the Comments section of this report. ",
+                  "description": "",
+                  "value": "Note: For reporting cancer biomarker testing results, the CAP Lung Biomarker Template should be used. Pending biomarker studies should be listed in the Comments section of this report. "
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "269",
+          "title": "Comments",
+          "children": [
+            {
+              "id": "270",
+              "title": "Comment(s)",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "#composition",
+      "title": "Composition",
+      "children": [
+        {
+          "required": 1,
+          "id": "ehrId",
+          "title": "EHR ID",
+          "extTypes": [
+            "ehrId"
+          ],
+          "type": "string"
+        },
+        {
+          "required": 1,
+          "id": "itemType",
+          "title": "itemType",
+          "extTypes": [
+            "itemType"
+          ],
+          "type": "string"
+        },
+        {
+          "required": 1,
+          "id": "category",
+          "title": "category",
+          "extTypes": [
+            "category"
+          ],
+          "type": "string"
+        },
+        {
+          "id": "composerRef",
+          "title": "composerRef",
+          "children": [
+            {
+              "required": 1,
+              "id": "partyRefValue",
+              "title": "partyRefValue",
+              "extTypes": [
+                "composerRef"
+              ],
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "#eventContext",
+      "title": "eventContext",
+      "children": [
+        {
+          "required": 1,
+          "id": "startTime",
+          "title": "startTime",
+          "extTypes": [
+            "startTime"
+          ],
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "repeat": 0,
+      "id": "#participations",
+      "title": "participations",
+      "children": [
+        {
+          "required": 1,
+          "id": "function",
+          "title": "function",
+          "extTypes": [
+            "function"
+          ],
+          "type": "string"
+        },
+        {
+          "id": "performerRef",
+          "title": "performerRef",
+          "children": [
+            {
+              "required": 1,
+              "id": "partyRefValue",
+              "title": "partyRefValue",
+              "extTypes": [
+                "performerRef"
+              ],
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "#correlation",
+      "title": "Correlation",
+      "children": [
+        {
+          "id": "ruleId",
+          "title": "ruleId",
+          "extTypes": [
+            "ruleId"
+          ],
+          "type": "string"
+        },
+        {
+          "repeat": 0,
+          "id": "references",
+          "title": "References",
+          "children": [
+            {
+              "id": "type",
+              "title": "referenceType",
+              "extTypes": [
+                "referenceType"
+              ],
+              "type": "string"
+            },
+            {
+              "id": "value",
+              "title": "referenceValue",
+              "extTypes": [
+                "referenceValue"
+              ],
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
