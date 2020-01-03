@@ -1,15 +1,28 @@
-import { vuex } from './index';
+import { vuex, i18n as messages, components } from './index';
 import View from './demo.vue';
 import * as views from './views';
-
 
 import Vue from 'vue';
 import Vuex from 'vuex';
 import VueRouter from 'vue-router';
+import VueI18n from 'vue-i18n';
 
 Vue.use(Vuex);
 Vue.use(VueRouter);
+Vue.use(VueI18n);
+
+const i18n = new VueI18n({
+  locale: (navigator.language || navigator.userLanguage).substr(0, 2),
+  fallbackLocale: 'en',
+  messages
+});
+
 const store = new Vuex.Store(vuex);
+
+for (let componentKey in components) {
+  let component = components[componentKey];
+  Vue.component(component.name || componentKey, component);
+}
 
 const keys = Object.keys(views);
 const routes = [];
@@ -30,8 +43,9 @@ const router = new VueRouter({
 const root = document.createElement('div');
 document.body.appendChild(root);
 
-let vm = new Vue({
+new Vue({
   el: root,
+  i18n,
   store,
   router,
   render: _ => _('router-view')
