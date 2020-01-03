@@ -281,7 +281,7 @@ export const actions = {
     const submitData = {};
     const tempHash = {};
     for (let prop in status) {
-      if (status[prop] === true) {
+      if (status[prop] === true && data[prop] !== undefined) {
         build_parent(prop, data, elements, submitData, tempHash);
       }
     }
