@@ -1,4 +1,4 @@
-const DEFAULT_STATE = { template: {}, submitData: {}, mappings: {}, elements: {}, data: {}, status: {}, index: 0 };
+const DEFAULT_STATE = { rootIndex: undefined, template: {}, submitData: {}, mappings: {}, elements: {}, data: {}, status: {}, index: undefined };
 const ELEMENT_NOT_FOUND = "ELEMENT_NOT_FOUND";
 const ELEMENT_INVALID = "ELEMENT_INVALID";
 const PARENT_INVALID = "PARENT_INVALID";
@@ -79,37 +79,9 @@ function template_transform(mappings, schema, key, node, parent) {
   return key;
 }
 
-function buildByRepeatNode(index, data, status, mappings, elements, dataNodes, ignores, parent) {
-  let _index = index;
-  let _parent = parent;
-  if (ignores[parent] === PARENT_REPEAT) {
-    _parent = _index++;
-    elements[_parent] = { ...elements[parent], child: [] };
-    mappings[elements[parent].id].push(_parent);
-    ignores[parent] = PARENT_REPEAT;
-  }
-
-  for (let child of dataNodes) {
-    _index = buildBySubmitData(_index, data, status, mappings, elements, child, ignores, _parent);
-  }
-
-  return _index;
-}
-
-function buildBySubmitData(index, data, status, mappings, elements, dataNode, ignores, parent) {
+function buildBySubmitData(index, data, status, mappings, elements, submitData, dataNode, ignores, parent) {
   const { id, value, children } = dataNode;
   let _index = index;
-  if (!id) {
-    // 输入类型,multiple处理
-    if (value) {
-      data[parent].children = [...(data[parent].children || []), { value }];
-    }
-    // repeat数据处理
-    if (!isArrayEmpty(children) && parent !== undefined) {
-      _index = buildByRepeatNode(index, data, status, mappings, elements, children, ignores, parent);
-    }
-    return _index;
-  }
 
   let key;
   for (let _key of mappings[id]) {
@@ -129,6 +101,7 @@ function buildBySubmitData(index, data, status, mappings, elements, dataNode, ig
     key = _index++;
     mappings[id].push(key);
   }
+  submitData[key] = dataNode;
   ignores[key] = true;
   if (elements[key].item === true || TYPES.includes(elements[key].type)) {
     data[key] = { id };
@@ -139,7 +112,7 @@ function buildBySubmitData(index, data, status, mappings, elements, dataNode, ig
 
   if (!isArrayEmpty(children)) {
     for (let child of children) {
-      _index = buildBySubmitData(_index, data, status, mappings, elements, child, ignores, key);
+      _index = buildBySubmitData(_index, data, status, mappings, elements, submitData, child, ignores, key);
     }
   }
 
@@ -147,39 +120,18 @@ function buildBySubmitData(index, data, status, mappings, elements, dataNode, ig
 }
 
 
-function build_parent(key, data, elements, submitData, tempHash, child) {
-
-  const tempKey = `${key}:${child || ''}`;
-  if (tempHash[tempKey] === true)
-    return;
-  tempHash[tempKey] = true;
-
-  let children;
-  if (child !== undefined) {
-    if (elements[child].repeat !== undefined) {
-
-      const tempChildRepeat = `REPEAT::${elements[child].id}`;
-      tempHash[tempChildRepeat].children.push(submitData[child]);
-
-      const tempChild = `ID::${elements[child].id}`;
-      if (tempHash[tempChild] === true)
-        return;
-      tempHash[tempChild] = true;
-      children = [tempHash[tempChildRepeat]];
-
-    } else if (submitData[child]) {
-      children = [submitData[child]];
-    }
-  }
-
-  const { id, repeat } = elements[key];
-  const tempRepeat = `REPEAT::${id}`;
-  const _submitData = submitData[key] = submitData[key] || {};
+function build_parent(key, data, elements, submitData, child) {
+  let children = child !== undefined && submitData[child] !== undefined ? [submitData[child]] : undefined;
+  const _submitData = submitData[key] || {};
   _submitData.children = _submitData.children || [];
   if (children !== undefined) {
     _submitData.children = children.concat(_submitData.children);
   }
 
+  if (submitData[key] !== undefined)
+    return;
+
+  const { id } = elements[key];
   if (data[key] === undefined) {
     _submitData.id = id;
   } else {
@@ -194,14 +146,10 @@ function build_parent(key, data, elements, submitData, tempHash, child) {
 
   if (_submitData.children.length <= 0)
     delete _submitData.children;
-  if (repeat !== undefined) {
-    delete _submitData.id;
-    if (tempHash[tempRepeat] === undefined)
-      tempHash[tempRepeat] = { id, children: [] };
-  }
+  submitData[key] = _submitData;
 
   if (elements[key].parent !== undefined) {
-    build_parent(elements[key].parent, data, elements, submitData, tempHash, key);
+    build_parent(elements[key].parent, data, elements, submitData, key);
   }
 }
 
@@ -216,6 +164,7 @@ export const mutations = {
     state.data = _payload.data;
     state.status = _payload.status;
     state.mappings = _payload.mappings;
+    state.rootIndex = _payload.rootIndex;
     state.index = _payload.index;
     state.template = _payload.template;
     state.submitData = _payload.submitData;
@@ -258,8 +207,8 @@ export const actions = {
   changeByTemplate(ctx) {
     const elements = {};
     const mappings = {};
-    const template = ctx.state.template;
-    const index = template_transform(mappings, elements, 1, template);
+    const { rootIndex, template } = ctx.state;
+    const index = template_transform(mappings, elements, rootIndex, template);
     ctx.commit('init', { elements, mappings, index, template });
   },
   changeByTemplateAndSubmit(ctx) {
@@ -267,10 +216,10 @@ export const actions = {
     const elements = {};
     const mappings = {};
     const status = {};
-    const { template, submitData } = ctx.state;
-    let index = template_transform(mappings, elements, 1, template);
+    const { rootIndex, template, submitData } = ctx.state;
+    let index = template_transform(mappings, elements, rootIndex, template);
     const data = {};
-    index = buildBySubmitData(index, data, status, mappings, elements, submitData, ignores);
+    index = buildBySubmitData(index, data, status, mappings, elements, submitData, submitData[rootIndex], ignores);
     ctx.commit('init', { elements, mappings, index, template, data, submitData, status });
   },
   changeSubmitDataByData(ctx) {
@@ -279,10 +228,9 @@ export const actions = {
     const elements = ctx.state.elements;
 
     const submitData = {};
-    const tempHash = {};
     for (let prop in status) {
       if (status[prop] === true && data[prop] !== undefined) {
-        build_parent(prop, data, elements, submitData, tempHash);
+        build_parent(prop, data, elements, submitData);
       }
     }
 

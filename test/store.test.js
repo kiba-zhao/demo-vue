@@ -12,7 +12,8 @@ describe('store', () => {
 
     it('success', () => {
 
-      const state = { template, submitData: { id: template.id, children: formData } };
+      const rootIndex = 1;
+      const state = { rootIndex, template, submitData: { [rootIndex]: { id: template.id, children: formData } } };
       // console.log(1111111111, JSON.stringify(state.template));
       // console.log(2222222222, JSON.stringify(state.submitData));
       const commit = jest.fn();
@@ -24,6 +25,7 @@ describe('store', () => {
       // console.log(9999999, JSON.stringify(commit.mock.calls[0][1].mappings));
       // console.log(9999999, JSON.stringify(commit.mock.calls[0][1].data));
       // console.log(9999999, JSON.stringify(commit.mock.calls[0][1].elements));
+      // console.log(9999999, JSON.stringify(commit.mock.calls[0][1].submitData));
     });
 
   });
