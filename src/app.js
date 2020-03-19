@@ -1,5 +1,13 @@
+/**
+ * @fileOverview 应用入口文件
+ * @name app.js
+ * @author kiba.x.zhao <xiafeng@aegleanalytica.io>
+ * @license MIT
+ */
+'use strict';
+
+
 import { vuex, i18n as messages, components } from './index';
-import View from './demo.vue';
 import * as views from './views';
 
 import Vue from 'vue';
@@ -13,7 +21,7 @@ Vue.use(VueI18n);
 
 const i18n = new VueI18n({
   locale: (navigator.language || navigator.userLanguage).substr(0, 2),
-  fallbackLocale: 'en',
+  fallbackLocale: 'zh',
   messages
 });
 
@@ -21,22 +29,24 @@ const store = new Vuex.Store(vuex);
 
 for (let componentKey in components) {
   let component = components[componentKey];
-  Vue.component(component.name || componentKey, component);
+  if (component.name !== undefined)
+    Vue.component(component.name, component);
 }
 
+const indexKey = 'App';
 const keys = Object.keys(views);
 const routes = [];
 const links = [];
 for (let key of keys) {
   let name = views[key].name;
   let path = `/${key}`;
-  routes.push({ path, component: views[key] });
+  routes.push({ path, component: views[key], props: { links, indexKey } });
   links.push({ path, name: name, key });
 }
 const router = new VueRouter({
   routes: [
     ...routes,
-    { path: '/', component: View, props: { links } }
+    { path: '/', redirect: `/${indexKey}` }
   ]
 });
 
